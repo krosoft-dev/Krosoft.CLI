@@ -10,10 +10,8 @@ internal static class Program
         return await Parser.Default.ParseArguments<Options.GitPullOptions, Options.GitCleanOptions
                            >(args)
                            .MapResult(
-                                      (Options.GitPullOptions _) => ProgramConfig.Pull(),
-                                      (Options.GitCleanOptions _) => ProgramConfig.Clean(),
-
-                                      //(Options.RunOptions opts) => ProgramRun.Run(opts),
+                                      (Options.GitPullOptions _) => ProgramGit.Pull(),
+                                      (Options.GitCleanOptions _) => ProgramGit.Clean(),
                                       _ => Task.FromResult(-1));
     }
 
