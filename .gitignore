@@ -402,4 +402,4 @@ yarn-error.log*
 # Specific to this project
 *.bak 
 temp/
- 
+**/publish/* 

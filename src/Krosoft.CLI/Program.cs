@@ -7,11 +7,13 @@ internal static class Program
     private static async Task<int> Main(params string[] args)
     {
         PrintBanner();
-        return await Parser.Default.ParseArguments<Options.GitPullOptions, Options.GitCleanOptions
-                           >(args)
+        return await Parser.Default.ParseArguments<Options.GitPullOptions,
+                               Options.GitCleanOptions,
+                               Options.RunOptions>(args)
                            .MapResult(
                                       (Options.GitPullOptions _) => ProgramGit.Pull(),
                                       (Options.GitCleanOptions _) => ProgramGit.Clean(),
+                                      (Options.RunOptions opts) => ProgramGit.Handle(opts),
                                       _ => Task.FromResult(-1));
     }
 

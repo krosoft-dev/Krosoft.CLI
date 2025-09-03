@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Krosoft.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "git -c"
+    }
+  }
+}
