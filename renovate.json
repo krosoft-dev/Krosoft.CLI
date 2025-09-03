@@ -16,16 +16,6 @@
       "matchPackageNames": ["Krosoft.Extensions.**"]
     },
     {
-      "groupName": "AutoMapper",
-      "matchPackageNames": ["AutoMapper"],
-      "enabled": false
-    },
-    {
-      "groupName": "MediatR",
-      "matchPackageNames": ["MediatR"],
-      "enabled": false
-    },
-    {
       "groupName": "dotnet packages",
       "extends": "monorepo:dotnet"
     },
